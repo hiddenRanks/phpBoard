@@ -14,9 +14,90 @@
                     <span><a href="#">+</a></span>&nbsp;&nbsp;자유 게시판
                 </p>
             </div>
-
             <div class="contents">
-                <p>최신글 14개</p>
+                <ul class="board-list big">
+                    <!-- 어떤 게시판(테이블)인가 / 게시판(테이블)의 번호(테이블 번호) -->
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -28,7 +109,25 @@
             </div>
 
             <div class="contents">
-                <p>최신글 8개</p>
+            <ul class="board-list">
+                    <!-- 어떤 게시판(테이블)인가 / 게시판(테이블)의 번호(테이블 번호) -->
+                    <li class="eachList small">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 

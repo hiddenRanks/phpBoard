@@ -32,12 +32,52 @@
 
 .boardTitle > p > span {
     font-size: 24px;
-    cursor: pointer;
+}
+
+.boardTitle > p > span > a {
+    color: black;
 }
 
 .contents {
     width: 100%;
     height: 85%;
-    margin-top: 8px;
-    border: 1px solid black;
+    margin-top: 2px;
+    position: relative;
 }
+
+.board-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.eachList {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+.eachList > a {
+    color: black;
+    font-size: 16px;
+}
+
+.eachList:first-child {
+    margin-top: 0;
+}
+
+.eachList > a:hover span.title {
+    color: #ff9f04;
+}
+
+.eachList > a > .number { font-size: 15px; }
+.eachList > a > .comment { color: royalblue; font-weight: bold; }
+.eachList > a > .date { color: gray; }
+
+.big > .eachList > a > .number { margin-left: 10px; }
+.big > .eachList > a > .title { margin-left: 30px; }
+.big > .eachList > a > .comment { margin-left: 82%; }
+.big > .eachList > a > .date { margin-left: 5px; }
