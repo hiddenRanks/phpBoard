@@ -1,0 +1,60 @@
+#wrapper {
+    width: 900px;
+    height: 800px;
+    margin-top: 40px;
+}
+
+.writeBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 1px solid #888;
+    padding: 8px;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 640px;
+    bottom: 100px;
+    resize: none;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.submit {
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    bottom: 30px;;
+    right: 0;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #1ab2ff;
+}
+
+.submit:hover {
+    background-color: #00a9ff;
+}
+
+.textCheck {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    font-weight: bold;
+}

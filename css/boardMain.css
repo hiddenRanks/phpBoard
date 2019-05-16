@@ -81,3 +81,8 @@
 .big > .eachList > a > .title { margin-left: 30px; }
 .big > .eachList > a > .comment { margin-left: 82%; }
 .big > .eachList > a > .date { margin-left: 5px; }
+
+.small > .eachList > a > .number { margin-left: 10px; }
+.small > .eachList > a > .title { margin-left: 30px; }
+.small > .eachList > a > .comment { margin-left: 63%; }
+.small > .eachList > a > .date { margin-left: 5px; }

@@ -11,7 +11,7 @@
         <div class="top freeBoard">
             <div class="boardTitle">
                 <p>
-                    <span><a href="#">+</a></span>&nbsp;&nbsp;자유 게시판
+                    <span><a href="freeBoard.php">+</a></span>&nbsp;&nbsp;자유 게시판
                 </p>
             </div>
             <div class="contents">
@@ -104,14 +104,14 @@
         <div class="bottom talkBoard">
             <div class="boardTitle">
                 <p>
-                    <span><a href="#">+</a></span>&nbsp;&nbsp;토론 게시판
+                    <span><a href="talkBoard.php">+</a></span>&nbsp;&nbsp;토론 게시판
                 </p>
             </div>
 
             <div class="contents">
-            <ul class="board-list">
+            <ul class="board-list small">
                     <!-- 어떤 게시판(테이블)인가 / 게시판(테이블)의 번호(테이블 번호) -->
-                    <li class="eachList small">
+                    <li class="eachList">
                         <a href="#">
                             <span class="number">111</span>
                             <span class="title">이건 좀...</span>
@@ -134,12 +134,21 @@
         <div class="bottom hobby">
             <div class="boardTitle">
                 <p>
-                    <span><a href="#">+</a></span>&nbsp;&nbsp;취미 게시판
+                    <span><a href="hobbyBoard.php">+</a></span>&nbsp;&nbsp;취미 게시판
                 </p>
             </div>
 
             <div class="contents">
-                <p>최신글 8개</p>
+                <ul class="board-list small">
+                    <li class="eachList">
+                        <a href="#">
+                            <span class="number">111</span>
+                            <span class="title">이건 좀...</span>
+                            <span class="comment">+14</span>
+                            <span class="date">5.30</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

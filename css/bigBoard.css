@@ -1,0 +1,76 @@
+#wrapper {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 1060px;
+    position: relative;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    width: 100%;
+    border-top: 1px solid #888;
+    border-bottom: 2px solid black;
+}
+
+thead > tr {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+thead > tr > .number { width: 90px; }
+thead > tr > .title { width: 500px; }
+thead > tr > .writer { width: 230px; }
+thead > tr > .date { width: 80px; }
+thead > tr > .views { width: 80px; }
+thead > tr > .like { width: 80px; }
+
+tbody {
+    text-align: center;
+}
+
+tbody > tr {
+    height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody > tr > .title { text-align: left; cursor: pointer; }
+tbody > tr > .title > span { font-weight: bold; color: royalblue; }
+tbody > tr > .title:hover { color: #ff9f04; }
+tbody > tr > .title:hover span { color: royalblue; }
+tbody > tr > .writer { font-weight: bold; text-align: left; }
+tbody > tr > .date { color: #888; }
+tbody > tr > .comment { font-weight: bold; color: royalblue; }
+
+.searchBox {
+    position: absolute;
+    right: 35px;
+    bottom: -50px;
+}
+
+.searchWrite {
+    height: 30px;
+    border: 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #888;
+}
+
+.searchBtn {
+    width: 80px;
+    height: 30px;
+    border-radius: 2px;
+    line-height: 30px;
+    text-align: center;
+    border: 0;
+    background-color: #1ab2ff;
+}
+
+.searchBtn:hover {
+    background-color: #00a9ff;
+}

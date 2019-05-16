@@ -11,6 +11,8 @@
             <a href="./boardMain.php">게시판 놀러가기</a>
         </div>
 
+        
+
         <div class="textLogo">
             <p>
                 혼란스러운 게시판에 오신걸 환영합니다!
