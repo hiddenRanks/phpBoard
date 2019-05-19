@@ -19,12 +19,12 @@
 
         <div class="loginBox">
             <h2>혼란한 회원가입</h2>
-            <form action="./register_ok.php">
+            <form action="./register_ok.php" method="post">
                 <input type="text" name="name" placeholder="자신의 이름/My name" class="input mn">
                 <input type="text" name="ID" placeholder="아이디/Id" class="input id">
                 <input type="password" name="password" placeholder="비밀번호/Password" class="input pw">
+                <input type="submit" value="회원가입" class="register-btn">
             </form>
-            <a href="./register.php" class="register-btn">회원가입</a>
         </div>
     </div>
 </body>

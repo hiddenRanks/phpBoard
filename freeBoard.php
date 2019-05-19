@@ -1,3 +1,5 @@
+<?php require("db.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +54,10 @@
                 <input type="submit" value="검색" class="searchBtn">
             </div>
         </form>
+        <?php if(isset($_SESSION['user'])) : ?>
+        <a href="#">글 쓰기</a>
+        <?php else : ?>
+        <?php endif ?>
     </div>
 </body>
 </html>

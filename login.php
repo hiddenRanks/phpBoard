@@ -1,3 +1,11 @@
+<?php
+    require("db.php");
+
+    if(isset($_SESSION['user'])) {
+        msgAndGo("이미 로그인이 되어있습니다.", "./boardMain.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +19,6 @@
             <a href="./boardMain.php">게시판 놀러가기</a>
         </div>
 
-        
-
         <div class="textLogo">
             <p>
                 혼란스러운 게시판에 오신걸 환영합니다!
@@ -21,7 +27,7 @@
 
         <div class="loginBox">
             <h2>혼란한 로그인</h2>
-            <form action="./login_ok.php">
+            <form action="./login_ok.php" method="post">
                 <input type="text" name="ID" placeholder="아이디/Id" class="input id">
                 <input type="password" name="password" placeholder="비밀번호/Password" class="input pw">
                 <input type="submit" value="로그인" class="input login-btn">
