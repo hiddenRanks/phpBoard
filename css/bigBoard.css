@@ -69,8 +69,26 @@ tbody > tr > .comment { font-weight: bold; color: royalblue; }
     text-align: center;
     border: 0;
     background-color: #1ab2ff;
+    cursor: pointer;
 }
 
 .searchBtn:hover {
     background-color: #00a9ff;
+}
+
+.goWrite {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 13px;
+    bottom: -50px;
+    color: black;
+    border-radius: 2px;
+    background-color: #00C3FF;
+}
+
+.goWrite:hover {
+    background-color: #00B9FF;
 }

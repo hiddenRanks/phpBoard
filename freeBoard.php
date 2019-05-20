@@ -55,7 +55,7 @@
             </div>
         </form>
         <?php if(isset($_SESSION['user'])) : ?>
-        <a href="#">글 쓰기</a>
+            <a href="./writeBoard.php" class="goWrite">글 쓰기</a>
         <?php else : ?>
         <?php endif ?>
     </div>

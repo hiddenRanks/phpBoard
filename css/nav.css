@@ -37,6 +37,14 @@ nav {
     right: 4%; bottom: 25%;
 }
 
+.accountBox > div.info > span {
+    margin-left: 30px;
+}
+
+.accountBox > div.info > a {
+    margin-left: 130px;
+}
+
 .accountBox > div > span {
     position: absolute;
     height: 100%;
@@ -49,7 +57,7 @@ nav {
     width: 35%;
     height: 40px;
     float: left;
-    margin-left: 100px;
+    margin-left: 10px;
     text-align: center;
     font-weight: bold;
     line-height: 40px;
@@ -66,6 +74,5 @@ nav {
 }
 
 .goRegister {
-    margin-left: 10%;
     background-color: rgba(255, 0, 0, 0.336);
 }

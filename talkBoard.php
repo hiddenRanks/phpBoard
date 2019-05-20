@@ -54,6 +54,10 @@
                 <input type="submit" value="검색" class="searchBtn">
             </div>
         </form>
+        <?php if(isset($_SESSION['user'])) : ?>
+            <a href="./writeBoard.php" class="goWrite">글 쓰기</a>
+        <?php else : ?>
+        <?php endif ?>
     </div>
 </body>
 </html>
