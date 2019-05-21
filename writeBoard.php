@@ -10,7 +10,15 @@
     <?php require("modPage/nav.php"); ?>
     <div id="wrapper">    
         <div class="writeBox">
-            <form action="./write_ok.php" method="post">
+            <form action="./writeFree_ok.php" method="post">
+                <div id="select">
+                    <select name="opt" class="opt">
+                        <option value="freeBoard">자유 게시판</option>
+                        <option value="talkBoard">토론 게시판</option>
+                        <option value="hobbyBoard">취미 게시판</option>
+                    </select>    
+                </div>
+
                 <input type="text" name="title" class="title" placeholder="제목 입력">
                 <textarea name="content" id="content" cols="30" rows="10"></textarea>
                 <input type="submit" value="글 올리기" class="submit">

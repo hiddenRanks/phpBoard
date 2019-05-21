@@ -9,7 +9,7 @@ function updateInputCount() {
     var byteCnt = 0;
     var forIE = false; //IE는 가끔 한글이 전부 지워짐
     
-    console.log(textLength);
+    //console.log(textLength);
     for(var i = 0; i < textLength; i++) {
         var charTemp = $("#content").val().charAt(i);
 

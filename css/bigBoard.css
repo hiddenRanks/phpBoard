@@ -40,11 +40,11 @@ tbody > tr {
     border-bottom: 1px solid #ddd;
 }
 
-tbody > tr > .title { text-align: left; cursor: pointer; }
+tbody > tr > .title { text-align: left; cursor: pointer; text-overflow: ellipsis; }
 tbody > tr > .title > span { font-weight: bold; color: royalblue; }
 tbody > tr > .title:hover { color: #ff9f04; }
 tbody > tr > .title:hover span { color: royalblue; }
-tbody > tr > .writer { font-weight: bold; text-align: left; }
+tbody > tr > .writer { font-weight: bold; text-align: left; text-overflow: ellipsis; }
 tbody > tr > .date { color: #888; }
 tbody > tr > .comment { font-weight: bold; color: royalblue; }
 
