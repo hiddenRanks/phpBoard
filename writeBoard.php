@@ -10,7 +10,7 @@
     <?php require("modPage/nav.php"); ?>
     <div id="wrapper">    
         <div class="writeBox">
-            <form action="./writeFree_ok.php" method="post">
+            <form action="./write_ok.php" method="post">
                 <div id="select">
                     <select name="opt" class="opt">
                         <option value="freeBoard">자유 게시판</option>

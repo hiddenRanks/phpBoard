@@ -18,87 +18,26 @@
             </div>
             <div class="contents">
                 <ul class="board-list big">
-                    <!-- 어떤 게시판(테이블)인가 / 게시판(테이블)의 번호(테이블 번호) -->
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
+                    <?php
+                        $sql = "SELECT * FROM freeBoard LIMIT ?";
+                        $limit = 7;
+
+                        $result = fetchAll($con, $sql, [$limit]);
+                        if($result == null) {
+                            echo "들어온 값 없음";
+                        }
+
+                        // foreach($result as $row) {
+                        //     echo '<li class="eachList">';
+                        //         echo '<a href="#">';
+                        //             echo '<span class="number">'.$row['id'].'</span>';
+                        //             echo '<span class="title">'.$row['title'].'</span>';
+                        //             echo '<span class="comment">'.$row['comment'].'</span>';
+                        //             echo '<span class="date">'.$row['date'].'</span>';
+                        //         echo '</a>';
+                        //     echo '</li>';
+                        // }
+                    ?>
                 </ul>
             </div>
         </div>
