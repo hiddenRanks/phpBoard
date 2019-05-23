@@ -77,12 +77,12 @@
 .eachList > a > .comment { color: royalblue; font-weight: bold; }
 .eachList > a > .date { color: gray; }
 
-.big > .eachList > a > .number { margin-left: 10px; }
-.big > .eachList > a > .title { margin-left: 30px; }
-.big > .eachList > a > .comment { margin-left: 82%; }
-.big > .eachList > a > .date { margin-left: 5px; }
+.big > .eachList > a > .number { font-size: 13px; margin-left: 10px; }
+.big > .eachList > a > .title { position: absolute; left: 80px; }
+.big > .eachList > a > .comment { position: absolute; right: 70px; }
+.big > .eachList > a > .date { position: absolute; right: 15px; }
 
-.small > .eachList > a > .number { margin-left: 10px; }
-.small > .eachList > a > .title { margin-left: 30px; }
-.small > .eachList > a > .comment { margin-left: 63%; }
-.small > .eachList > a > .date { margin-left: 5px; }
+.small > .eachList > a > .number { font-size: 13px; margin-left: 10px; }
+.small > .eachList > a > .title { position: absolute; left: 80px; }
+.small > .eachList > a > .comment { position: absolute; right: 65px; }
+.small > .eachList > a > .date { position: absolute; right: 15px; }

@@ -5,7 +5,7 @@ if(isset($_POST['opt'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
     $writer = $_SESSION['user']->id;
-    $date = date("Y-m-d H:i:s");
+    $date = date("Y-m-d h-i-s");
     $views = 0;
     $comment = 0;
 

@@ -19,24 +19,39 @@
             <div class="contents">
                 <ul class="board-list big">
                     <?php
-                        $sql = "SELECT * FROM freeBoard LIMIT ?";
-                        $limit = 7;
+                        $sql = "SELECT * FROM freeBoard ORDER BY id DESC LIMIT 0, 7";
 
-                        $result = fetchAll($con, $sql, [$limit]);
-                        if($result == null) {
-                            echo "들어온 값 없음";
+                        $result = fetchAll($con, $sql, []);
+
+                        foreach($result as $row) {
+                            echo '<li class="eachList">';
+                                echo '<a href="readBoard.php?board=free&id='.$row->id.'">';
+                                    echo '<span class="number">'.$row->id.'</span>';
+                                    echo '<span class="title">'.$row->title.'</span>';
+                                    echo '<span class="comment">'.$row->comment.'</span>';
+
+                                    //년 월 일 관련
+                                    $now = date("Y-m-d"); //2019-05-23
+                                    $nowMonth = substr($now, 6, 2);
+                                    $nowDay = substr($now, 9, 2);
+
+                                    list($year, $mon, $days) = explode("-", $row->date); //20190523
+                                    $day = substr($days, 0, 2);
+
+                                    //시 분 초 관련
+                                    list($hours, $minute, $second) = explode(":", $days);
+                                    $hour = substr($hours, 3, 2);
+                                    $times = $hour.':'.$minute;
+
+                                    //오늘 날짜에 올릴 시 [시간]을 아닐시 [날짜]를 출력
+                                    if($nowMonth == $mon && $nowDay == $day) {
+                                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
+                                    } else {
+                                        echo '<span class="date">'.$times.'</span>';
+                                    }
+                                echo '</a>';
+                            echo '</li>';
                         }
-
-                        // foreach($result as $row) {
-                        //     echo '<li class="eachList">';
-                        //         echo '<a href="#">';
-                        //             echo '<span class="number">'.$row['id'].'</span>';
-                        //             echo '<span class="title">'.$row['title'].'</span>';
-                        //             echo '<span class="comment">'.$row['comment'].'</span>';
-                        //             echo '<span class="date">'.$row['date'].'</span>';
-                        //         echo '</a>';
-                        //     echo '</li>';
-                        // }
                     ?>
                 </ul>
             </div>
@@ -50,24 +65,42 @@
             </div>
 
             <div class="contents">
-            <ul class="board-list small">
-                    <!-- 어떤 게시판(테이블)인가 / 게시판(테이블)의 번호(테이블 번호) -->
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
+                <ul class="board-list small">
+                    <?php
+                        $sql = "SELECT * FROM talkBoard ORDER BY id DESC LIMIT 0, 7";
+
+                        $result = fetchAll($con, $sql, []);
+
+                        foreach($result as $row) {
+                            echo '<li class="eachList">';
+                                echo '<a href="readBoard.php?board=talk&id='.$row->id.'">';
+                                    echo '<span class="number">'.$row->id.'</span>';
+                                    echo '<span class="title">'.$row->title.'</span>';
+                                    echo '<span class="comment">'.$row->comment.'</span>';
+
+                                    //년 월 일 관련
+                                    $now = date("Y-m-d"); //2019-05-23
+                                    $nowMonth = substr($now, 6, 2);
+                                    $nowDay = substr($now, 9, 2);
+
+                                    list($year, $mon, $days) = explode("-", $row->date); //20190523
+                                    $day = substr($days, 0, 2);
+
+                                    //시 분 초 관련
+                                    list($hours, $minute, $second) = explode(":", $days);
+                                    $hour = substr($hours, 3, 2);
+                                    $times = $hour.':'.$minute;
+
+                                    //오늘 날짜에 올릴시 [시간]을 아닐시 [날짜]를 출력
+                                    if($nowMonth == $mon && $nowDay == $day) {
+                                        echo '<span class="date">'.$times.'</span>';
+                                    } else {
+                                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
+                                    }
+                                echo '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -81,14 +114,42 @@
 
             <div class="contents">
                 <ul class="board-list small">
-                    <li class="eachList">
-                        <a href="#">
-                            <span class="number">111</span>
-                            <span class="title">이건 좀...</span>
-                            <span class="comment">+14</span>
-                            <span class="date">5.30</span>
-                        </a>
-                    </li>
+                    <?php
+                        $sql = "SELECT * FROM hobbyBoard ORDER BY id DESC LIMIT 0, 7";
+
+                        $result = fetchAll($con, $sql, []);
+
+                        foreach($result as $row) {
+                            $readID = $row->id;
+                            echo '<li class="eachList">';
+                                echo '<a href="readBoard.php?board=hobby&id=$readID">';
+                                    echo '<span class="number">'.$row->id.'</span>';
+                                    echo '<span class="title">'.$row->title.'</span>';
+                                    echo '<span class="comment">'.$row->comment.'</span>';
+
+                                    //년 월 일 관련
+                                    $now = date("Y-m-d"); //2019-05-23
+                                    $nowMonth = substr($now, 6, 2);
+                                    $nowDay = substr($now, 9, 2);
+
+                                    list($year, $mon, $days) = explode("-", $row->date); //20190523
+                                    $day = substr($days, 0, 2);
+
+                                    //시 분 초 관련
+                                    list($hours, $minute, $second) = explode(":", $days);
+                                    $hour = substr($hours, 3, 2);
+                                    $times = $hour.':'.$minute;
+
+                                    //오늘 날짜에 올릴시 [시간]을 아닐시 [날짜]를 출력
+                                    if($nowMonth == $mon && $nowDay == $day) {
+                                        echo '<span class="date">'.$times.'</span>';
+                                    } else {
+                                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
+                                    }
+                                echo '</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>

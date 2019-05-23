@@ -2,14 +2,79 @@
     width: 900px;
     height: 800px;
     margin-top: 40px;
-    border: 1px solid black;
+    position: relative;
 }
 
 .getBoard {
     width: 100%;
     height: 70%;
+    position: relative;
 }
 
 .getBoard > .header {
-    border-bottom: 1px solid #888;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.getBoard > .header > .writer {
+    position: absolute;
+    left: 30px;
+}
+
+.getBoard > .header > .title {
+    position: absolute;
+    left: 250px;
+}
+
+.getBoard > .header > .date {
+    position: absolute;
+    right: 15px;
+    color: #888;
+}
+
+.getBoard > .content {
+    position: absolute;
+    width: 100%;
+    height: 91%;
+    padding-top: 12px;
+    padding-left: 10px;
+    top: 50px;
+    border-bottom: 2px solid black;
+}
+
+.upDel {
+    margin-top: 20px;
+    position: relative;
+}
+
+.upDel > .update {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: cyan;
+    border-radius: 2px;
+    color: black;
+}
+
+.upDel > .update:hover {
+    background-color: darkturquoise;
+}
+
+.upDel > .delete {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 100px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.336);
+    border-radius: 2px;
+    color: black;
+    font-weight: bold;
 }
