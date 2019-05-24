@@ -1,3 +1,5 @@
+<?php require("db.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +9,21 @@
 <body>
     <?php require("modPage/nav.php"); ?>
     <div id="wrapper">
-        <?php             
-            require("db.php");    
+        <?php
             $boardID = $_GET['id'];
             $boardCon = $_GET['board'];
+
+            switch($boardCon) {
+                case 'freeBoard':
+                    $krCon = '자유 게시판';
+                    break;
+                case 'talkBoard':
+                    $krCon = '토론 게시판';
+                    break;
+                case 'hobbyBoard':
+                    $krCon = '취미 게시판';
+                    break;
+            }
                                 
             $sql = "SELECT * FROM $boardCon WHERE id = $boardID";
 
@@ -18,6 +31,13 @@
         ?>
         <div class="writeBox">
             <form action="./update_ok.php" method="post">
+                <div id="select">
+                    <select name="opt" class="opt">
+                        <?php
+                            echo '<option value="'.$boardCon.'">'.$krCon.'</option>';
+                        ?>
+                    </select>    
+                </div>
                 <input type="text" name="title" class="title" placeholder="제목 입력" value=<?= $boardInfo->title ?>>
                 <textarea name="content" id="content" cols="30" rows="10"><?= $boardInfo->content ?></textarea>
                 <input type="submit" value="글 수정" class="submit">
