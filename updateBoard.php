@@ -38,7 +38,8 @@
                         ?>
                     </select>    
                 </div>
-                <input type="text" name="title" class="title" placeholder="제목 입력" value=<?= $boardInfo->title ?>>
+                <input type="text" name="id" class="numb" placeholder="아이디 저장용" value=<?= $boardID ?>>
+                <input type="text" name="title" class="title" id="title" placeholder="제목 입력" value=<?= $boardInfo->title ?>>
                 <textarea name="content" id="content" cols="30" rows="10"><?= $boardInfo->content ?></textarea>
                 <input type="submit" value="글 수정" class="submit">
             </form>
