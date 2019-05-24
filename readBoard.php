@@ -35,8 +35,8 @@
 
                     //년 월 일 관련
                     $now = date("Y-m-d"); //2019-05-23
-                    $nowMonth = substr($now, 6, 2);
-                    $nowDay = substr($now, 9, 2);
+                    $nowMonth = substr($now, 5, 2);
+                    $nowDay = substr($now, 8, 2);
 
                     list($year, $mon, $days) = explode("-", $readBoard->date); //20190523
                     $day = substr($days, 0, 2);
@@ -48,9 +48,9 @@
 
                     //오늘 날짜에 올릴 시 [시간]을 아닐 시 [날짜]를 출력
                     if($nowMonth == $mon && $nowDay == $day) {
-                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
-                    } else {
                         echo '<span class="date">'.$times.'</span>';
+                    } else {
+                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
                     }
                 ?>
             </div>
@@ -64,8 +64,10 @@
         
         <?php if(isset($_SESSION['user']) && $_SESSION['user']->id == $readBoard->writer) : ?>
             <div class="upDel">
-                <a class="update" href="./updateBoard.php">수정하기</a>
-                <a  class="delete" href="./delete_ok.php?board=free&id=$readBoard">삭제하기</a>
+                <?php
+                    echo '<a class="update" href="updateBoard.php?board='.$boardCon.'&id='.$readBoard->id.'">수정하기</a>';
+                    echo '<a class="delete" href="delete_ok.php?board='.$boardCon.'&id='.$readBoard->id.'">삭제하기</a>';
+                ?>
             </div>
         <?php else : ?>
         <?php endif ?>

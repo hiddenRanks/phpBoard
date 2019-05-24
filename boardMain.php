@@ -32,8 +32,8 @@
 
                                     //년 월 일 관련
                                     $now = date("Y-m-d"); //2019-05-23
-                                    $nowMonth = substr($now, 6, 2);
-                                    $nowDay = substr($now, 9, 2);
+                                    $nowMonth = substr($now, 5, 2);
+                                    $nowDay = substr($now, 8, 2);
 
                                     list($year, $mon, $days) = explode("-", $row->date); //20190523
                                     $day = substr($days, 0, 2);
@@ -45,9 +45,9 @@
 
                                     //오늘 날짜에 올릴 시 [시간]을 아닐시 [날짜]를 출력
                                     if($nowMonth == $mon && $nowDay == $day) {
-                                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
-                                    } else {
                                         echo '<span class="date">'.$times.'</span>';
+                                    } else {
+                                        echo '<span class="date">'.$mon.'.'.$day.'</span>';
                                     }
                                 echo '</a>';
                             echo '</li>';
@@ -80,8 +80,8 @@
 
                                     //년 월 일 관련
                                     $now = date("Y-m-d"); //2019-05-23
-                                    $nowMonth = substr($now, 6, 2);
-                                    $nowDay = substr($now, 9, 2);
+                                    $nowMonth = substr($now, 5, 2);
+                                    $nowDay = substr($now, 8, 2);
 
                                     list($year, $mon, $days) = explode("-", $row->date); //20190523
                                     $day = substr($days, 0, 2);
@@ -129,8 +129,8 @@
 
                                     //년 월 일 관련
                                     $now = date("Y-m-d"); //2019-05-23
-                                    $nowMonth = substr($now, 6, 2);
-                                    $nowDay = substr($now, 9, 2);
+                                    $nowMonth = substr($now, 5, 2);
+                                    $nowDay = substr($now, 8, 2);
 
                                     list($year, $mon, $days) = explode("-", $row->date); //20190523
                                     $day = substr($days, 0, 2);
